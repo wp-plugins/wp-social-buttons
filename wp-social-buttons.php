@@ -86,7 +86,7 @@ function wpsb_sidebar_admin_option_page(){ ?>
 				<td>&nbsp;</td>
 				<td rowspan="24" valign="top" style="padding-left: 20px;border-left:1px solid #ccc;">
 					<h2>Plugin Author:</h2>
-	<div style="font-size: 14px; display:none;">
+	<div style="font-size: 14px;">
 	<img src="<?php echo  plugins_url( 'images/raghu.jpg' , __FILE__ );?>" width="100" height="100"><br><a href="http://raghunathgurjar.wordpress.com" target="_blank">Raghunath Gurjar</a><br><br><a href="mailto:raghunath.0087@gmail.com" target="_blank">Contact Me!</a><br><br>Author Blog <a href="http://raghunathgurjar.wordpress.com" target="_blank">http://raghunathgurjar.wordpress.com</a>
 	<br><br><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WN785E5V492L4" target="_blank" style="font-size: 17px; font-weight: bold;">Donate for this plugin</a><br><br>
 	My Other Plugins:<br>
