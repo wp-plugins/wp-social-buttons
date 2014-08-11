@@ -110,7 +110,13 @@ function wpsb_sidebar_load_inline_js()
   
 $jscnt.='});</script>';
 
-$jscnt.='<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+$jscnt.='<div id="fb-root"></div><script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=170994699765546&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, \'script\', \'facebook-jssdk\'));</script><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 </script><script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script><script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>';
 	
 	echo $jscnt;
@@ -131,7 +137,23 @@ $jscnt.='<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d
 function get_wpsb_sidebar_content() {
 	global $post;
 $pluginOptionsVal=get_wpsb_sidebar_options();
-
+if(is_category())
+	{
+	   $category_id = get_query_var('cat');
+	   $shareurl =get_category_link( $category_id );   
+	   $cats = get_the_category();
+	   $ShareTitle=$cats[0]->name;
+	}elseif(is_page() || is_single())
+	{
+	   $shareurl=get_permalink($post->ID);
+	   $ShareTitle=$post->post_title;
+	}
+	else
+	{
+        $shareurl =home_url('/');
+        $ShareTitle=get_bloginfo('name');
+		}
+		
 // Top Margin
 if($pluginOptionsVal['wpsb_top_margin']!=''){
 	$margin=$pluginOptionsVal['wpsb_top_margin'];
@@ -161,42 +183,46 @@ if($pluginOptionsVal['wpsb_position']=='right'){
 <div class="show"><a href="javascript:" alt="Email" id="show"><img src="<?php echo plugins_url('wp-social-buttons/images/'.$showImg);?>" title="Show Buttons"></a></div>
 
 <div id="social-inner">
+<?php if(get_wpsb_sidebar_options('wpsb_fpublishBtn')!=''):?>
 	<div class="sbutton">
-		<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=170994699765546&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-
-<div class="fb-like" data-href="http://wordpress.org" data-layout="box_count" data-action="like" data-show-faces="true" data-share="false"></div>
-	</div>
+		<div id="fb">
+<div class="fb-like" data-href="<?php echo $shareurl;?>" data-layout="box_count" data-action="like" data-show-faces="true" data-share="false"></div>
+	</div></div>
+<?php 
+endif;
+if($pluginOptionsVal['wpsb_tpublishBtn']!=''):
+?>	
 	<div class="sbutton">
-		<div id="tw"><a href="https://twitter.com/share" class="twitter-share-button"  data-count="vertical" data-url="http://wordpress.org">Tweet</a>
+		<div id="tw"><a href="https://twitter.com/share" class="twitter-share-button"  data-count="vertical" data-url="<?php echo $shareurl;?>">Tweet</a>
 </div>
 	</div>
+<?php 
+endif;
+if($pluginOptionsVal['wpsb_gpublishBtn']!=''):
+?>
 	<div class="sbutton">
-		<div id="gp"><!-- Place this tag in your head or just before your close body tag. -->
-
-
-<!-- Place this tag where you want the +1 button to render. -->
-<div class="g-plusone" data-size="tall" data-href="http://wordpress.org"></div></div>
+		<div id="gp"><div class="g-plusone" data-size="tall" data-href="<?php echo $shareurl;?>"></div></div>
 	</div>
+<?php 
+endif;
+if($pluginOptionsVal['wpsb_lpublishBtn']!=''):
+?>
 	<div class="sbutton">
 		<div id="li"><script src="//platform.linkedin.com/in.js" type="text/javascript">
   lang: en_US
 </script>
-<script type="IN/Share" data-url="http://wordpress.org" data-counter="top"></script></div>
+<script type="IN/Share" data-url="<?php echo $shareurl;?>" data-counter="top"></script></div>
 	</div>
+<?php 
+endif;
+if($pluginOptionsVal['wpsb_ppublishBtn']!=''):
+?>	
 	<div class="sbutton">
-		<div id="pin"><a href="//www.pinterest.com/pin/create/button/?url=http://wordpress.org&media=http://farm8.staticflickr.com/7027/6851755809_df5b2051c9_z.jpg&description=Next stop: Pinterest" data-pin-do="buttonPin" data-pin-config="above" data-pin-color="red" data-pin-height="20"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_20.png" /></a>
+		<div id="pin"><a href="//www.pinterest.com/pin/create/button/?url=<?php echo $shareurl;?>&media=http://farm8.staticflickr.com/7027/6851755809_df5b2051c9_z.jpg&description=<?php echo $ShareTitle;?>" data-pin-do="buttonPin" data-pin-config="above" data-pin-color="red" data-pin-height="28"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_28.png" /></a>
 <!-- Please call pinit.js only once per page -->
 
 	</div></div>
-
+<?php endif;?>
 </div>
 
 <div class="hide"><a href="javascript:" alt="Email" id="hide"><img src="<?php echo plugins_url('wp-social-buttons/images/'.$hideImg);?>" title="Hide Buttons"></a></div>

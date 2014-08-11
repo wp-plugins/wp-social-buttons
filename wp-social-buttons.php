@@ -50,7 +50,14 @@ function wpsb_sidebar_init(){
 	register_setting('wpsb_sidebar_options','wpsb_tpublishBtn');	
 	register_setting('wpsb_sidebar_options','wpsb_gpublishBtn');	
 	register_setting('wpsb_sidebar_options','wpsb_ppublishBtn');	
-	register_setting('wpsb_sidebar_options','wpsb_lpublishBtn');	
+	register_setting('wpsb_sidebar_options','wpsb_lpublishBtn');
+		
+	register_setting('csbwf_sidebar_options','csbwfs_fb_url');
+	register_setting('csbwf_sidebar_options','csbwfs_tw_url');
+	register_setting('csbwf_sidebar_options','csbwfs_li_url');		
+	register_setting('csbwf_sidebar_options','csbwfs_gp_url');	
+	register_setting('csbwf_sidebar_options','csbwfs_pin_url');	
+
 } 
 
 
@@ -161,11 +168,16 @@ function wpsb_sidebar_uninstall(){
 	delete_option('wpsb_page_hide_home');
 	delete_option('wpsb_page_hide_post');
 	delete_option('wpsb_page_hide_page');
-	delete_option('csbwfs_fpublishBtn');
-	delete_option('csbwfs_tpublishBtn');
-	delete_option('csbwfs_gpublishBtn');	
-	delete_option('csbwfs_ppublishBtn');	
-	delete_option('csbwfs_lpublishBtn');
+	delete_option('wpsb_fpublishBtn');
+	delete_option('wpsb_tpublishBtn');
+	delete_option('wpsb_gpublishBtn');	
+	delete_option('wpsb_ppublishBtn');	
+	delete_option('wpsb_lpublishBtn');
+	delete_option('wpsb_fb_url');
+	delete_option('wpsb_tw_url');
+	delete_option('wpsb_li_url');		
+	delete_option('wpsb_gp_url');	
+	delete_option('wpsb_pin_url');	
 
 } 
 ?>

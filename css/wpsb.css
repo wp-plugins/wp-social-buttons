@@ -5,60 +5,56 @@
 }
 
 .social-widget .sbutton {
-    float: right;
-    height: auto;
-    margin: 0;
+   padding-bottom: 2px;
+    padding-left: 5px;
     position: relative;
     width: auto;
-    padding-bottom:5px;
 }
-	.sbutton img{padding:5px;}
-	
-	#tw a{background:none repeat scroll 0 0 #2CA8D2; text-align:center; display:block;  width:45px; height:40px; border-bottom:1px solid rgba(255, 255, 255, 0.1)}
-	
-	#fb a{background:none repeat scroll 0 0 #305891; text-align:center; display:block;  width:45px; height:40px; border-bottom:1px solid rgba(255, 255, 255, 0.1);outline:none;}
-	
-	#ml a{background:none repeat scroll 0 0 #738A8D; text-align:center; display:block;  width:45px; height:40px; border-bottom:1px solid rgba(255, 255, 255, 0.1);outline:none;}
-	
-	#gp a{background:none repeat scroll 0 0 #DD4C39; text-align:center; display:block;  width:45px; height:40px; border-bottom:1px solid rgba(255, 255, 255, 0.1); outline:none;}
-	
-	#li a{background:none repeat scroll 0 0 #007BB6; text-align:center; display:block;  width:45px; height:40px; border-bottom:1px solid rgba(255, 255, 255, 0.1); outline:none;}
-	
-	#pin a{background:none repeat scroll 0 0 #ca2027; text-align:center; display:block;  width:45px; height:40px; border-bottom:1px solid rgba(255, 255, 255, 0.1); outline:none;}
-#wpsb-right #fb a {
+
+#wpsb-left #social-inner {
+    border: 1px solid #666;
+    border-radius: 0 5px 5px 0;
+    width: 72px;
+}
+
+#fb  {
+    padding-top:5px;
+    }
+    
+#wpsb-right #fb  {
     position: absolute;
     right: 0;
   
 }
-#wpsb-right #tw a {
+#wpsb-right #tw  {
     position: absolute;
     right: 0;
    
 }
-#wpsb-right #gp a {
+#wpsb-right #gp  {
     position: absolute;
     right: 0;
 
 }
 
-#wpsb-right #li a {
+#wpsb-right #li  {
     position: absolute;
     right: 0;
   
 }
-#wpsb-right #pin a {
+#wpsb-right #pin  {
     position: absolute;
     right: 0;
  
 }
-#wpsb-right #ml a {
+#wpsb-right #ml  {
     position: absolute;
     right: 0;
    
 }
 
 #wpsb-left #pin{
-    padding-top:30px;
+    padding-top:37px;
  
 }
 
