@@ -15,22 +15,21 @@ Using this plugin you can easly share your website with your firends on Facebook
 There are not added any external JS files in this plugin so it's does not effect on your site speed as well.
 
 = Features = 
-* Floating Sidebar
-* Options to show/hide the specific social buttons
-* Options for define the postion(Left/Right) of floating sidebar
+ * Floating Sidebar
+ * Options to show/hide the specific social buttons
+ * Options for define the postion(Left/Right) of floating sidebar
 
 == Installation ==
 
-Step 1. Upload "wp-social-buttons" folder to the `/wp-content/plugins/` directory
+ * Step 1. Upload "wp-social-buttons" folder to the `/wp-content/plugins/` directory
 
-Step 2. Activate the plugin through the Plugins menu in WordPress
+ * Step 2. Activate the plugin through the Plugins menu in WordPress
 
-Step 3. Go to Settings/"WP Social Buttons" and configure the plugin settings.
+ * Step 3. Go to Settings/"WP Social Buttons" and configure the plugin settings.
 
 == Frequently Asked Questions ==
-Q.How add floating social buttons on my website?
-
-Ans.After active the plugin you have must need to enable this plugin and cheked the checkbox other settings as well.
+* Q.How add floating social buttons on my website?
+  Ans.After active the plugin you have must need to enable this plugin and cheked the checkbox other settings as well.
 
 == Screenshots ==
 
