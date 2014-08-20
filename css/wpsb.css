@@ -1,0 +1,36 @@
+.social-widget {
+    position: fixed;
+    z-index: 99999;
+}
+
+.social-widget .sbutton {
+   padding-bottom: 2px;
+    padding-left: 5px;
+    position: relative;
+    width: auto;
+}
+
+#wpsb-left #social-inner {
+    border: 1px solid #666;
+    border-radius: 0 5px 5px 0;
+    width: 72px;
+}
+
+#wpsb-right #social-inner {
+    border: 1px solid #666;
+    border-radius: 5px 0 0 5px;
+    width: 72px;
+}
+
+#fb  {
+    padding-top:5px;
+    }
+
+#pin{
+    padding-top:37px;
+ 
+}
+
+#wpsb-right a#hide {padding-right:33px;}
+
+#wpsb-right a#show {float:right;}
