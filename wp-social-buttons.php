@@ -24,12 +24,18 @@ Version: 1.0
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+/*
+ * WP Social Buttons
+ * @add_action
+ * @register_setting
+ * 
+ * */
 //Admin "WP Social Buttons" Menu Item
 add_action('admin_menu','wpsb_sidebar_menu');
 
 function wpsb_sidebar_menu(){
 
-	add_options_page('WP Social Buttons','WP Social Buttons','manage_options','wpsb-settings','wpsb_sidebar_admin_option_page');
+add_options_page('WP Social Buttons','WP Social Buttons','manage_options','wpsb-settings','wpsb_sidebar_admin_option_page');
 
 }
 
@@ -51,7 +57,6 @@ function wpsb_sidebar_init(){
 	register_setting('wpsb_sidebar_options','wpsb_gpublishBtn');	
 	register_setting('wpsb_sidebar_options','wpsb_ppublishBtn');	
 	register_setting('wpsb_sidebar_options','wpsb_lpublishBtn');
-		
 	register_setting('csbwf_sidebar_options','csbwfs_fb_url');
 	register_setting('csbwf_sidebar_options','csbwfs_tw_url');
 	register_setting('csbwf_sidebar_options','csbwfs_li_url');		
@@ -59,7 +64,6 @@ function wpsb_sidebar_init(){
 	register_setting('csbwf_sidebar_options','csbwfs_pin_url');	
 
 } 
-
 
 // Add settings link to plugin list page in admin
         function wpsb_add_settings_link( $links ) {
@@ -73,7 +77,7 @@ function wpsb_sidebar_init(){
 
 /* 
 
-*Display the Options form for Custom Tweets 
+*Display Options form for WP Social Buttons 
 
 */
 
@@ -88,7 +92,7 @@ function wpsb_sidebar_admin_option_page(){ ?>
 <!-- Start Options Form -->
 
 	<form action="options.php" method="post" id="wpsb-sidebar-admin-form">
-		<table class="cssfw">
+		<table class="wpsb">
 			<tr><th>&nbsp;</th>
 				<td>&nbsp;</td>
 				<td rowspan="24" valign="top" style="padding-left: 20px;border-left:1px solid #ccc;">

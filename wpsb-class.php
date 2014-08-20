@@ -1,4 +1,11 @@
 <?php 
+/*
+ * WP Social Buttons
+ * @get_wpsb_sidebar_options()
+ * @wp_register_style()
+ * @wp_enqueue_script
+ * @add_action
+ * */
 // get all options value for "Custom Share Buttons with Floating Sidebar"
 	function get_wpsb_sidebar_options() {
 		global $wpdb;
@@ -11,7 +18,7 @@
 		return $ctOptions;	
 	}
 	
-// Get plugin options
+// Get WP Social Buttons plugin options
 
 $pluginOptionsVal=get_wpsb_sidebar_options();
 //check plugin in enable or not
@@ -40,60 +47,11 @@ function wpsb_sidebar_load_inline_js()
 	$jscnt='<script>jQuery(document).ready(function()
   { ';
  
- 
   if($pluginOptionsVal['wpsb_delayTimeBtn']!='0'):
    $jscnt.='jQuery("#delaydiv").hide();
 	setTimeout(function(){
 	 jQuery("#delaydiv").fadeIn();}, '.$pluginOptionsVal['wpsb_delayTimeBtn'].');';
   endif;  
-  
-  if($pluginOptionsVal['wpsb_tpublishBtn']!=''):
-  $jscnt.='jQuery("div#tw a").hover(function(){
-  jQuery("div#tw a").animate({width:"60px"});
-  },function(){
-    jQuery("div#tw a").stop( true, true ).animate({width:"45px"});
-  });';
-  endif;
-  
-  if($pluginOptionsVal['wpsb_fpublishBtn']!=''):
-  $jscnt.='jQuery("div#fb a").hover(function(){
-    jQuery("div#fb a").animate({width:"60px"});
-  },function(){
-    jQuery("div#fb a").stop( true, true ).animate({width:"45px"});
-  });';
-  endif;
-  
-  if($pluginOptionsVal['wpsb_mpublishBtn']!=''):
-  $jscnt.='jQuery("div#ml a").hover(function(){
-    jQuery("div#ml a").animate({width:"60px"});
-  },function(){
-    jQuery("div#ml a").stop( true, true ).animate({width:"45px"});
-  });';
-  endif;
-  
-  if($pluginOptionsVal['wpsb_gpublishBtn']!=''):
-  $jscnt.='jQuery("div#gp a").hover(function(){
-    jQuery("div#gp a").animate({width:"60px"});
-  },function(){
-    jQuery("div#gp a").stop( true, true ).animate({width:"45px"});
-  });';
-  endif;
-  
-  if($pluginOptionsVal['wpsb_lpublishBtn']!=''):
-  $jscnt.='jQuery("div#li a").hover(function(){
-    jQuery("div#li a").animate({width:"60px"});
-  },function(){
-    jQuery("div#li a").stop( true, true ).animate({width:"45px"});
-  });';
-  endif;
-  
-   if($pluginOptionsVal['wpsb_ppublishBtn']!=''):
-  $jscnt.='jQuery("div#pin a").hover(function(){
-    jQuery("div#pin a").animate({width:"60px"});
-  },function(){
-    jQuery("div#pin a").stop( true, true ).animate({width:"45px"});
-  });';
-  endif;
 
   $jscnt.='jQuery("div.show").hide();
   jQuery("div.show a").click(function(){
@@ -121,12 +79,6 @@ $jscnt.='<div id="fb-root"></div><script>(function(d, s, id) {
 	
 	echo $jscnt;
 }	
-
-/*
------------------------------------------------------------------------------------------------
-                              "WP Social Buttons" HTML
------------------------------------------------------------------------------------------------
-*/
 
 /*
 -----------------------------------------------------------------------------------------------
@@ -178,10 +130,8 @@ if($pluginOptionsVal['wpsb_position']=='right'){
 	}
 ?>
 <div id="delaydiv">
-<div class='social-widget' <?php echo $idName;?> title="Share This With Your Friends" <?php echo $style;?> >
-
+<div class='social-widget' <?php echo $idName;?> title="Share This Site With Your Friends" <?php echo $style;?> >
 <div class="show"><a href="javascript:" alt="Email" id="show"><img src="<?php echo plugins_url('wp-social-buttons/images/'.$showImg);?>" title="Show Buttons"></a></div>
-
 <div id="social-inner">
 <?php if(get_wpsb_sidebar_options('wpsb_fpublishBtn')!=''):?>
 	<div class="sbutton">
@@ -225,7 +175,7 @@ if($pluginOptionsVal['wpsb_ppublishBtn']!=''):
 <?php endif;?>
 </div>
 
-<div class="hide"><a href="javascript:" alt="Email" id="hide"><img src="<?php echo plugins_url('wp-social-buttons/images/'.$hideImg);?>" title="Hide Buttons"></a></div>
+<div class="hide"><a href="javascript:" alt="Hide WP Social Buttons" id="hide"><img src="<?php echo plugins_url('wp-social-buttons/images/'.$hideImg);?>" title="Hide Buttons"></a></div>
 
 </div>
 </div>
