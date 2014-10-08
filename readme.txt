@@ -6,7 +6,7 @@ Requires at least: 2.7
 Tested up to: 4.0
 Stable tag: 1.0
 
-Add WP Social Buttons Using Floating Sidebar On Your Site (Facebook,Twitter,Linkedin,Google+,Pinterest)
+Add Social Buttons Using Floating Sidebar On Your Site (Facebook,Twitter,Linkedin,Google+,Pinterest)
 
 == Description ==
 
