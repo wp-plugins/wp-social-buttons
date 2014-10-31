@@ -10,18 +10,27 @@
     width: auto;
 }
 
+
+#wpsb-right .sbutton {
+    padding-left: 20px;
+    position: relative;
+    width: auto;
+}
+
 #wpsb-left #social-inner {
-    border: 1px solid #666;
-    border-radius: 0 5px 5px 0;
-    width: 72px;
+
+    width: 89px;
+    background: url('../images/left.png') no-repeat;
+    height:390px;
 }
 
 #wpsb-right #social-inner {
-    border: 1px solid #666;
-    border-radius: 5px 0 0 5px;
-    width: 72px;
+    width: 89px;
+    background: url('../images/right.png') no-repeat;
+    height:390px;
 }
 
+#social-inner .first {padding-top:45px;}
 #fb  {
     padding-top:5px;
     }

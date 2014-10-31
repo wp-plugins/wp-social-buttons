@@ -133,8 +133,8 @@ if($pluginOptionsVal['wpsb_position']=='right'){
 <div class='social-widget' <?php echo $idName;?> title="Share This Site With Your Friends" <?php echo $style;?> >
 <div class="show"><a href="javascript:" alt="Email" id="show"><img src="<?php echo plugins_url('wp-social-buttons/images/'.$showImg);?>" title="Show Buttons"></a></div>
 <div id="social-inner">
-<?php if($pluginOptionsVal['wpsb_fpublishBtn']!=''):?>
-	<div class="sbutton">
+<?php if(get_wpsb_sidebar_options('wpsb_fpublishBtn')!=''):?>
+	<div class="sbutton first">
 		<div id="fb">
 <div class="fb-like" data-href="<?php echo $shareurl;?>" data-layout="box_count" data-action="like" data-show-faces="true" data-share="false"></div>
 	</div></div>
