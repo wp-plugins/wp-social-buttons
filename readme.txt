@@ -3,10 +3,10 @@ Contributors:india-web-developer
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WN785E5V492L4
 Tags: social buttons,custom social buttons,facebook, twitter, google+, linkedin, pinterest,social floating sidebar,floating social buttons,Facebbok Like
 Requires at least: 2.7
-Tested up to: 3.9.2
-Stable tag: 1.0
+Tested up to: 4.0
+Stable tag: 1.1
 
-Add WP Social Buttons Using Floating Sidebar On Your Site (Facebook,Twitter,Linkedin,Google+,Pinterest)
+Add Social Buttons Using Floating Sidebar (Facebook,Twitter,Linkedin,Google+,Pinterest)
 
 == Description ==
 
@@ -18,7 +18,9 @@ There are not added any external JS files in this plugin so it's does not effect
 
 = Features = 
 * Floating Sidebar
-* Options to show/hide the specific social buttons
+
+* Options to show/hide the social buttons
+
 * Options for define the postion(Left/Right) of floating sidebar
 
 == Installation ==
@@ -32,7 +34,7 @@ Step 3. Go to Settings/"WP Social Buttons" and configure the plugin settings.
 == Frequently Asked Questions ==
 1.How add floating social buttons on my website?
 
-After active the plugin you have must need to enable this plugin and other settings as well.
+After active the plugin you have must need to enable this plugin and other settings as well from plugin setting page.
 
 
 == Screenshots ==
@@ -42,6 +44,11 @@ After active the plugin you have must need to enable this plugin and other setti
 2. screenshot-2.png
 
 == Changelog == 
+
+= 1.1 = 
+ * Make plugin settings page more stylish
+ * Fixed CSS issues
+ * Added new background image
 
 = 1.0 = 
  * First stable release

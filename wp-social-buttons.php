@@ -5,7 +5,7 @@ Plugin URI: http://www.mrwebsolution.in/
 Description: "wp-social-buttons" is the very simple plugin for add to social buttons on your site!.
 Author: Raghunath
 Author URI: http://raghunathgurjar.wordpress.com
-Version: 1.0
+Version: 1.1
 */
 
 /*  Copyright 2014  Raghunath Gurjar  (email : raghunath.0087@gmail.com)
