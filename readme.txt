@@ -10,7 +10,7 @@ Add Social Buttons Using Floating Sidebar (Facebook,Twitter,Linkedin,Google+,Pin
 
 == Description ==
 
-"wp-social-buttons" is the very simple plugin for add to social buttons on your site(floating sidebar).
+"wp-social-buttons" is the very simple plugin for add to social buttons on your site.
 
 Using this plugin you can easly share your website with your firends on Facebook,Twitter,Linkedin,Pinterest,Google+.
 
@@ -18,10 +18,8 @@ There are not added any external JS files in this plugin so it's does not effect
 
 = Features = 
 * Floating Sidebar
-
 * Options to show/hide the social buttons
-
-* Options for define the postion(Left/Right) of floating sidebar
+* Options to define the postion(Left/Right) of floating sidebar
 
 == Installation ==
 
