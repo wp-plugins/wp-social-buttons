@@ -5,7 +5,7 @@ Plugin URI: http://www.mrwebsolution.in/
 Description: "wp-social-buttons" is the very simple plugin for add to social buttons on your site!.
 Author: Raghunath
 Author URI: http://raghunathgurjar.wordpress.com
-Version: 1.1
+Version: 1.2
 */
 
 /*  Copyright 2014  Raghunath Gurjar  (email : raghunath.0087@gmail.com)
@@ -57,11 +57,12 @@ function wpsb_sidebar_init(){
 	register_setting('wpsb_sidebar_options','wpsb_gpublishBtn');	
 	register_setting('wpsb_sidebar_options','wpsb_ppublishBtn');	
 	register_setting('wpsb_sidebar_options','wpsb_lpublishBtn');
-	register_setting('csbwf_sidebar_options','csbwfs_fb_url');
-	register_setting('csbwf_sidebar_options','csbwfs_tw_url');
-	register_setting('csbwf_sidebar_options','csbwfs_li_url');		
-	register_setting('csbwf_sidebar_options','csbwfs_gp_url');	
-	register_setting('csbwf_sidebar_options','csbwfs_pin_url');	
+	register_setting('wpsb_sidebar_options','wpsb_fb_url');
+	register_setting('wpsb_sidebar_options','wpsb_tw_url');
+	register_setting('wpsb_sidebar_options','wpsb_li_url');		
+	register_setting('wpsb_sidebar_options','wpsb_gp_url');	
+	register_setting('wpsb_sidebar_options','wpsb_pin_url');		
+	register_setting('wpsb_sidebar_options','wpsb_deactive_for_mob');	
 
 } 
 
@@ -118,6 +119,10 @@ function wpsb_sidebar_admin_option_page(){ ?>
 				<input type="checkbox" id="publish3" name="wpsb_gpublishBtn" value="yes" <?php if(get_option('wpsb_gpublishBtn')=='yes'){echo 'checked="checked"';}?>/> <b>Google Button</b><br>
 				<input type="checkbox" id="publish4" name="wpsb_lpublishBtn" value="yes" <?php if(get_option('wpsb_lpublishBtn')=='yes'){echo 'checked="checked"';}?>/> <b>Linkdin Button</b><br>
 				<input type="checkbox" id="publish6" name="wpsb_ppublishBtn" value="yes" <?php if(get_option('wpsb_ppublishBtn')=='yes'){echo 'checked="checked"';}?>/> <b>Pinterest Button</b></p>
+	
+	<p><label>&nbsp;</label>
+				<td><input type="checkbox" id="wpsb_deactive_for_mob" name="wpsb_deactive_for_mob" value="yes" <?php if(get_option('wpsb_deactive_for_mob')=='yes'){echo 'checked="checked"';}?>/> <strong><?php _e('Disable For Mobile','wpsb');?></strong>
+			</p>
 	</div>
 
 	<!-- Support -->
@@ -204,7 +209,8 @@ function wpsb_sidebar_uninstall(){
 	delete_option('wpsb_tw_url');
 	delete_option('wpsb_li_url');		
 	delete_option('wpsb_gp_url');	
-	delete_option('wpsb_pin_url');	
+	delete_option('wpsb_pin_url');		
+	delete_option('wpsb_deactive_for_mob');	
 
 } 
 ?>
