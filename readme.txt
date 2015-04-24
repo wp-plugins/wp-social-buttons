@@ -3,7 +3,7 @@ Contributors:india-web-developer
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WN785E5V492L4
 Tags: social buttons,custom social buttons,facebook, twitter, google+, linkedin, pinterest,social floating sidebar,floating social buttons,Facebbok Like,floating sidebar
 Requires at least: 3.3
-Tested up to: 4.1.2
+Tested up to: 4.2
 Stable tag: 1.4
 
 Add Social Buttons Using Floating Sidebar (Facebook,Twitter,Linkedin,Google+,Pinterest)
